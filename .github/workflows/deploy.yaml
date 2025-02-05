@@ -20,9 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project (if applicable)
-        run: npm run build # Remove if not needed
-
       - name: Zip project
         run: zip -r release.zip . -x "*.git*"
 
