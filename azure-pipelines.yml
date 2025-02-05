@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    include:
+      - main  # Runs the pipeline on changes to the 'main' branch
+
+pool:
+  vmImage: 'ubuntu-latest'  # Runs on an Ubuntu VM
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'  # Use Node.js version 18
+
+  - script: |
+      npm install  # Install dependencies
+      node server.js  # Run your Node.js app (assuming 'server.js' is your entry file)
+    displayName: 'Install dependencies & Start Server'
