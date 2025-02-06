@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'd91cf765-9ae9-42c6-98da-db910fa81c11'
 
   # Web app name
-  webAppName: ''
+  webAppName: 'to do'
 
   # Agent VM image name
   vmImageName: 'winlen'
