@@ -15,7 +15,7 @@ variables:
   webAppName: ''
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: ''winlen
 
 stages:
 - stage: Build
@@ -24,7 +24,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      name: winlen
 
     steps:
     - task: NodeTool@0
@@ -59,7 +59,7 @@ stages:
     displayName: Deploy
     environment: $(environmentName)
     pool:
-      vmImage: $(vmImageName)
+      name: winlen
     strategy:
       runOnce:
         deploy:
