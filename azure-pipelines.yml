@@ -4,7 +4,7 @@ trigger:
       - main  # Runs the pipeline on changes to the 'main' branch
 
 pool:
-  vmImage: 'ubuntu-latest'  # Runs on an Ubuntu VM
+  name: winlen
 
 steps:
   - task: NodeTool@0
