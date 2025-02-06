@@ -15,7 +15,7 @@ variables:
   webAppName: ''
 
   # Agent VM image name
-  vmImageName: ''winlen
+  vmImageName: 'winlen'
 
 stages:
 - stage: Build
